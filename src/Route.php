@@ -31,17 +31,21 @@ class Route
         $this->isSorted = false;
     }
 
-    public function getHtmlDescription() : string {
+    /**
+     * @return string
+     */
+    public function getDescription() : string {
         if (empty($this->cards)) {
             return "No cards";
         }
 
-        $description = "<ol>";
+        $description = "";
+        $i = 1;
         foreach ($this->getDescriptions() as $item) {
-            $description .= "<li>" . str_replace(["\n", "\r"], "",nl2br($item)) . "</li>";
+            $description .= $i . ". " . $item . PHP_EOL;
+            $i++;
         }
-        $description .= "<li>You have arrived at your final destination.</li>";
-        $description .= "</ol>";
+        $description .= $i . ". You have arrived at your final destination.";
 
         return $description;
     }
