@@ -1,0 +1,22 @@
+{
+    "name": "vkostenko/task",
+    "authors": [
+        {
+            "name": "Vladimir Kostenko",
+            "email": "v.kostenko.1988@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7"
+    },
+    "autoload": {
+        "psr-4": {
+            "VK\\Task\\": "src/",
+            "VK\\Test\\": "test/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require-dev": {
+        "phpunit/phpunit": "6.5"
+    }
+}
